@@ -48,6 +48,14 @@
   --customYellow: #f2b92b;
 }
 
+.font-garamond {
+  font-family: "GaramondPremrPro-LtDisp";
+}
+
+.font-garamond-cursiva-b {
+  font-family: "GaramondPremrPro-SmBdltSubh";
+}
+
 .fjalla-one-regular {
   font-family: "Fjalla One", sans-serif;
   font-weight: 400;
@@ -97,6 +105,9 @@ body {
 }
 
 #banner {
+  /* font-family: "GaramondPremrPro-SmBdltSubh"; */
+  /* font-family: "GaramondPremrPro-LtDisp"; */
+
   background-image: url('/images/banner-bg-web.webp');
 }
 
@@ -113,6 +124,7 @@ body {
   }
 
   #banner {
+ 
     background-image: url('/images/banner-mobile.png');
     background-position: center;
     background-size: cover;

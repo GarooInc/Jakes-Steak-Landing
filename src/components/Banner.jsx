@@ -13,12 +13,12 @@ const Banner = () => {
         className="text-center"
       >
         <p
-          className="text-[#1c5234] max-w-4xl text-2xl font-medium md:text-[83px]"
+          className="font-garamond text-[#1c5234] max-w-4xl text-2xl font-medium md:text-[83px]"
         >
           WE DIDN'T JUST OPEN <br /> A STEAK HOUSE
         </p>
         <p
-          className="text-[#1c5234] text-2xl  md:text-[83px] mb-12"
+          className="font-garamond-cursiva-b text-[#1c5234] text-2xl  md:text-[83px] mb-12"
         >
           WE OPENED THE HOUSE
           <br />
