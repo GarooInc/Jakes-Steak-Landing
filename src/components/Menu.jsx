@@ -100,7 +100,7 @@ export default function Menu() {
             <motion.button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-2 py-1 md:px-6 md:py-3 rounded-2xl font-semibold text-[10px] md:text-[18px] transition-all cursor-pointer whitespace-nowrap ${activeCategory === category ? "bg-[#c69e5a] text-white" : "bg-white text-slate-900"
+              className={`px-4 py-2 md:px-6 md:py-3 rounded-2xl font-semibold text-[10px] md:text-[18px] transition-all cursor-pointer whitespace-nowrap ${activeCategory === category ? "bg-[#c69e5a] text-white" : "bg-white text-slate-900"
                 }`}
               initial={{ opacity: 0, y: 10 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
@@ -153,16 +153,17 @@ export default function Menu() {
                 />
               ))}
             </div>
-            <button className="px-8 py-3 hidden md:block border-2 border-[#c69e5a] text-[#c69e5a] font-semibold rounded-full cursor-pointer hover:text-white hover:bg-[#c69e5a] transition uppercase text-sm tracking-wider">
+            <button className="px-8 py-3 hidden md:block border-2 border-[#c69e5a] text-[#ffffff] font-semibold rounded-full cursor-pointer hover:text-white hover:bg-[#c69e5a] transition uppercase text-sm tracking-wider">
               View All Dishes
             </button>
           </div>
         </motion.div>
 
       </div>
-      <button className="px-6 py-2 mt-40 block md:hidden border-2 border-[#c69e5a] text-[#c69e5a] font-semibold rounded-md md:rounded-full cursor-pointer hover:text-white hover:bg-[#c69e5a] transition uppercase text-sm tracking-wider">
+      <button className="px-6 py-2 mt-40 block md:hidden border-2 border-[#c69e5a] text-[#ffffff] font-semibold rounded-md md:rounded-full cursor-pointer hover:text-white hover:bg-[#c69e5a] transition uppercase text-sm tracking-wider">
         View All Dishes
       </button>
+      
 
 
     </motion.section>
