@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "GaramondPremrPro-BdItSubh";
+  src: url("./assets/fonts/GaramondPremrPro-BdItSubh.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GaramondPremrPro-BdSubh";
+  src: url("./assets/fonts/GaramondPremrPro-BdSubh.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "GaramondPremrPro-LtDisp";
+  src: url("./assets/fonts/GaramondPremrPro-LtDisp.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "GaramondPremrPro-SmBdltSubh";
+  src: url("./assets/fonts/GaramondPremrPro-SmbdItSubh.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Gotham-Bold";
+  src: url("./assets/fonts/gothamrnd_bold.otf") format("opentype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Gotham-Book";
+  src: url("./assets/fonts/gothamrnd_book.otf") format("opentype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Gotham-Light";
+  src: url("./assets/fonts/gothamrnd_light.otf") format("opentype");
+  font-weight: 300;
+}
+
+@theme {
+  --customGreen: #1c5234;
+  --customYellow: #f2b92b;
+}
+
+.fjalla-one-regular {
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.league-gothic {
+  font-family: "League Gothic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+header {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--customGreen);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.hero-section,
+.hero-wrapper {
+  background-image: url("../public/images/hero-bg-web.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.contact-us {
+  background-image: url("../public/images/hero-bg-web.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#banner {
+  background-image: url('/images/banner-bg-web.webp');
+}
+
+
+@media (max-width: 480px) {
+
+  .hero-section,
+  .hero-wrapper {
+    background-image: url("../public/images/hero-mobile.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+  #banner {
+    background-image: url('/images/banner-mobile.png');
+    background-position: center;
+    background-size: cover;
+  }
+        
+
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
