@@ -4,8 +4,6 @@
 export async function sendReservation(formData) {
    
   const apiUrl = import.meta.env.VITE_API_URL;
-  console.log("esta es la api", apiUrl)
-  console.log(formData)
 
   try {
     const response = await fetch(apiUrl, {

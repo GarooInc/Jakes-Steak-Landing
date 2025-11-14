@@ -7,7 +7,7 @@ import Menu from './components/Menu'
 import Reservation from './components/Reservation'
 import ContactUs from './components/ContactUs'
 import Footer from './components/Footer'
-import WhatsApp from './components/whatsapp'
+import WhatsApp from './components/WhatsApp'
 
 const App = () => {
   return (

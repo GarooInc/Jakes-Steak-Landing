@@ -19,9 +19,9 @@ const Footer = () => {
                 Call for Reservations:{" "}
                 <span className="text-white">502 2305 7979</span>
               </p>
-              <p className="text-[#7a7a7a] text-sm">
-                E-mail: <span className="text-white">jakes@e-mail.com</span>
-              </p>
+              <a href="mailto:info@jakesnysteak.com" className="text-[#7a7a7a] text-sm">
+                E-mail: <span className="text-white">info@jakesnysteak.com</span>
+              </a>
             </div>
           </div>
 
