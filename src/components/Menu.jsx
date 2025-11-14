@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react"
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion"
 import { ChevronRight } from "lucide-react"
+const categories = ["THE PERFECT STEAK","SIDES & SALADS", "APPETIZERS",   "SMOKING SOMER", "(UN) COMFORT FOOD"]
 
 const menuItems = [
   {
@@ -43,7 +44,6 @@ const menuItems = [
   },
 ]
 
-const categories = ["APPETIZERS", "SIDES & SALADS", "THE PERFECT STEAK", "SMOKING SOMER", "(UN) COMFORT FOOD"]
 
 export default function Menu() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -59,6 +59,7 @@ export default function Menu() {
       { threshold: 0.3 }
     )
     if (sectionRef.current) observer.observe(sectionRef.current)
+      
     return () => observer.disconnect()
   }, [])
 

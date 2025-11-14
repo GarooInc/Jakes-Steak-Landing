@@ -5,8 +5,12 @@ import { sendReservation } from "../lib/forms"
 
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion"
+import Toast from "./Toast"
 
 const Reservation = () => {
+  const [submitted, setSubmitted] = useState(false);
+  const [submittedFailed, setSubmittedFailed] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,7 +32,10 @@ const Reservation = () => {
     e.preventDefault()
     try {
         await sendReservation(formData)
+        setSubmitted(true); 
+
       } catch (error) {
+        setSubmittedFailed(true)
         console.log("Hubo un error al enviar tu reserva.", error)
       }
   }
@@ -63,6 +70,20 @@ const Reservation = () => {
             Jakes New York Steak | Prime Steak House & BBQ
           </p>
         </motion.div>
+        {/* toast al enviar el formulario  */}
+        {submitted && <Toast
+        message="Reservation sent successfully."
+        type="success"
+        onClose={() => setSubmitted(false)} 
+        duration={5000}
+        />}
+        {/* en caso de que el envio falle  */}
+        {submittedFailed && <Toast
+        message="Error during submission."
+        type="error"
+        onClose={() => setSubmittedFailed(false)} 
+        duration={5000}
+        />}
 
         {/* Form */}
         <motion.form
@@ -73,6 +94,7 @@ const Reservation = () => {
           transition={{ duration: 0.9, delay: 0.3 }}
           viewport={{ once: true, amount: 0.3 }}
         >
+          
           {/* First Row */}
           <div className="flex flex-col items-center gap-4 md:grid md:grid-cols-4 md:gap">
             <input
@@ -184,7 +206,7 @@ const Reservation = () => {
               BOOK YOUR TABLE
             </motion.button>
           </div>
-        </motion.form>
+        </motion.form> 
 
         {/* Footer Text */}
         <motion.div
