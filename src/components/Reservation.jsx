@@ -1,6 +1,8 @@
 "use client"
 
 import { useState } from "react"
+import { sendReservation } from "../lib/forms"
+
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion"
 
@@ -22,9 +24,13 @@ const Reservation = () => {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log("Reservation submitted:", formData)
+    try {
+        await sendReservation(formData)
+      } catch (error) {
+        console.log("Hubo un error al enviar tu reserva.", error)
+      }
   }
 
   return (
