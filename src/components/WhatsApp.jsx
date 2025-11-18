@@ -4,7 +4,7 @@ const WhatsApp = () => {
   return (
     <section className="" id="wp">
     <a
-        href="https://wa.me/00000000"
+        href="https://wa.me/51777100"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-5 right-5 z-50 animate-float"
